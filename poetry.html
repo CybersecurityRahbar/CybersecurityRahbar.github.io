@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ديوان الشعر - موقعي الشخصي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* تنسيقات خاصة بصفحة الشعر */
+        .poetry-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .poetry-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .poetry-header h1 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .poetry-header::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #e74c3c);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .poem {
+            background: white;
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poem:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .poem::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 6rem;
+            color: rgba(52, 152, 219, 0.1);
+            font-family: 'Georgia', serif;
+        }
+
+        .poem-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .poem-content {
+            color: #34495e;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-align: center;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        .poem-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-align: left;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 15px;
+            font-style: italic;
+        }
+
+        .poem-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .poem-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .poem-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .poem-btn.share {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        /* تأثيرات خاصة للقصائد */
+        .poem:nth-child(even) {
+            border-left-color: #e74c3c;
+        }
+
+        .poem:nth-child(3n) {
+            border-left-color: #27ae60;
+        }
+
+        /* تنسيقات للهواتف */
+        @media (max-width: 768px) {
+            .poetry-container {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+
+            .poetry-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .poem {
+                padding: 20px;
+            }
+
+            .poem-content {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* رسوم متحركة خفيفة */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .poem {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .poem:nth-child(2) { animation-delay: 0.2s; }
+        .poem:nth-child(3) { animation-delay: 0.4s; }
+        .poem:nth-child(4) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">الرئيسية</a> |
+            <a href="gallery.html">معرض الصور</a> |
+            <a href="videos.html">معرض الفيديوهات</a> |
+            <a href="poetry.html" style="color: #3498db;">ديوان الشعر</a> |
+            <a href="about.html">عنّي</a> |
+            <a href="contact.html">اتصل بي</a>
+        </nav>
+
+        <div class="poetry-container">
+            <div class="poetry-header">
+                <h1>🎭 ديوان الشعر</h1>
+                <p>قصائد عشوائيه</p>
+            </div>
+
+            <!-- القصيدة الأولى -->
+            <div class="poem">
+                <h3 class="poem-title">الوطن لاحمد مطر</h3>
+                <div class="poem-content">
+                    "نموت كي يحيا الوطن يحيا لمن ؟ نحن الوطن !
+                     من بعدنا يبقى التراب والعفن 
+                    . إن لم يكن بنا كريماً آمناً ولم يكن محترماً ولم يكن حُراً
+                     فلا عشنا ولا عاش الوطن .
+                </div>
+                <div class="poem-meta">
+                    📅 كتبت في: 15 يناير 2024 | 🏷️ خواطر
+                </div>
+                <div class="poem-actions">
+                    <button class="poem-btn">إعجاب</button>
+                    <button class="poem-btn share">مشاركة</button>
+                </div>
+            </div>
+
+            <!-- القصيدة الثانية -->
+            <div class="poem">
+                <h3 class="poem-title">الناس للناس ما دام الوفاء بهم</h3>
+                <div class="poem-content">
+                    الناسُ للناسِ مادامَ الوفاءُ بهم	والعسرُ واليسرُ أوقاتٌ وساعاتُ
+                    وأكرَمُ الناسِ ما بَين الوَرَى رَجلٌ	تُقْضى على يَدِه للنَّاسِ حاجاتُ
+                    لا تَقْطَعَنَّ يَدَ المَعروفِ عَنْ أَحَدٍ	ما دُمْتَ تَقْدِرُ فالأيامُ تَارَاتُ
+                    واشْكُرْ فَضِيلةَ صُنْعِ اللهِ إِذْ جَعَلَتْ	إِلَيْكَ لا لَكَ عِنْد الناسِ حَاجَاتُ
+                    قد مات قومٌ و ما ماتت فَضائلُهُم	وعاشَ قَومٌ وهُم في الناسِ أمْواتُ
+                    قصائد الإمام الشافعي
+                </div>
+                <div class="poem-meta">
+                    📅 كتبت في: 10 فبراير 2024 | 🏷️ شعر حر
+                </div>
+                <div class="poem-actions">
+                    <button class="poem-btn">إعجاب</button>
+                    <button class="poem-btn share">مشاركة</button>
+                </div>
+            </div>
+
+            <!-- القصيدة الثالثة -->
+            <div class="poem">
+                <h3 class="poem-title">ذم ولكن غريب</h3>
+                <div class="poem-content">
+                    حلموا فما ساءَت لهم شيم… سمحوا فما شحّت لهم مننُ
+
+                    سلموا فلا زلّت لهم قــــدمُ… رشدوا فلا ضلّت لهم سننُ 
+                    
+                    مننٌ لهم شحّت فما سمحوا.. شيمٌ لهم ساءَت فما حلموا
+
+                    سننٌ لهم ضلّت فلا رشدوا.. قدمٌ لهم زلّت فلا سلمــــوا  
+                </div>
+                <div class="poem-meta">
+                    📅 كتبت في: 5 مارس 2024 | 🏷️ غزل
+                </div>
+                <div class="poem-actions">
+                    <button class="poem-btn">إعجاب</button>
+                    <button class="poem-btn share">مشاركة</button>
+                </div>
+            </div>
+             <!-- القصيدة الثانية -->
+             <div class="poem">
+                <h3 class="poem-title">عبد الذاتٍ</h3>
+                <div class="poem-content">
+                    بنينا من ضحايا أمسنا جسرا ،
+                     وقدمنا ضحايا يومنا نذرا  ،  
+                      لنلقى في غد نصرا   ، 
+و يـمــمـنا إلى المسرى  ،  
+وكدنا نبلغ المسرى ،
+ولكن قام عبد ا لذات يدعو قائلا: "صبرا" ،
+فألقينا بباب الصبر قتلانا ،
+وقلنا إنه أدرى ،
+وبعد الصبر ألفينا العدى قد حطموا ا لجسرا ،
+فقمنا نطلب ا لثأ را ،
+ولكن قام عبد ا لذات يدعو قائلا: " صبرا" ،
+فألقينا بباب الصبر آلافا من القتلى ،
+وآلافا من الجرحى ،
+وآلافا من الأسرى ،
+وهد الحمل رحم الصبر حتى لم يطق صبرا ،
+فأنجب صبرنا صبرا ،
+وعبد ا لذات لم يرجع لنا من أرضنا شبرا ،
+ولم يضمن لقتلانا بها قبرا ،
+ولم يلق ا لعدا في البحر، بل ألقى دمانا وامتطى ا لبحر ا ،
+فسبحان الذي أسرى بعبد الذات من صبرا إلى مصرا ،
+وما أسرى به للضفة الأخرى
+                    
+                </div>
+                <div class="poem-meta">
+                    📅 كتبت في: 10 فبراير 2024 | 🏷️ شعر حر
+                </div>
+                <div class="poem-actions">
+                    <button class="poem-btn">إعجاب</button>
+                    <button class="poem-btn share">مشاركة</button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script>
+        // تفاعلات بسيطة للصفحة
+        document.querySelectorAll('.poem-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent === 'إعجاب') {
+                    this.textContent = '🤍 أعجبك';
+                    this.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+                }
+            });
+        });
+
+        // تأثيرات عند التمرير
+        document.addEventListener('DOMContentLoaded', function() {
+            const poems = document.querySelectorAll('.poem');
+           
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            poems.forEach(poem => {
+                poem.style.opacity = '0';
+                poem.style.transition = 'opacity 0.6s ease';
+                observer.observe(poem);
+            });
+        });
+    </script>
+</body>
+</html>
