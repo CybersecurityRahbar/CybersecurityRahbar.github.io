@@ -1,15 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber security</title>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>موقع [اسمك] الشخصي</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
@@ -17,56 +12,49 @@
             <a href="index.html">الرئيسية</a> |
             <a href="about.html">عنّي</a> |
             <a href="gallery.html">معرض الأعمال</a> |
-            <a href="videos.html" style="color: #3498db;">الفيديوهات</a>
+            <a href="videos.html" style="color: #3498db;">الفيديوهات</a> |
             <a href="poetry.html">ديوان الشعر</a> |
             <a href="contact.html">اتصل بي</a>
         </nav>
        
         <img src="images/profile.jpg" alt="صورة شخصية" class="profile-img">
         <h1>مرحباً، أنا [اسمك]</h1>
-        <!-- باقي المحتوى -->
         <h1>مرحباً! هذا موقعي الأول</h1>
         <p>لقد أنشأت هذا الموقع بنجاح باستخدام VS Code</p>
         <p>يمكنك الآن البدء بإضافة المحتوى الخاص بك</p>
+        
         <section class="video-section" style="margin: 40px 0; text-align: center;">
             <h2>فيديو تعريفي</h2>
             <div class="video-container" style="max-width: 800px; margin: 0 auto;">
-                <!-- غير هذا السطر فقط -->
-                <video controls width="100%" style="border-radius: 10px;"
-       onerror="handleVideoError(this)">
-    <source src="videos/my-video.mp4" type="video/mp4">
-    <source src="videos/my-video.webm" type="video/webm">
-    <source src="videos/my-video.ogg" type="video/ogg">
-   
-    <!-- رسالة خطأ مفصلة -->
-    <div class="video-error" style="display: none; padding: 20px; background: #fee; border-radius: 5px;">
-        <p>❌ حدث خطأ في تشغيل الفيديو. الأسباب المحتملة:</p>
-        <ul>
-            <li>تنسيق الفيديو غير مدعوم</li>
-            <li>حجم الفيديو كبير جداً</li>
-            <li>مشكلة في الترميز</li>
-        </ul>
-        <p>📥 <a href="videos/my-video.mp4" download>انقر لتحميل الفيديو</a></p>
-    </div>
-</video>
-
-<script>
-function handleVideoError(videoElement) {
-    const errorDiv = videoElement.querySelector('.video-error');
-    if (errorDiv) {
-        errorDiv.style.display = 'block';
-    }
-   
-    // تشخيص المشكلة
-    console.log('كود الخطأ:', videoElement.error ? videoElement.error.code : 'غير معروف');
-}
-</script>
+                <video controls width="100%" style="border-radius: 10px;" onerror="handleVideoError(this)">
+                    <source src="videos/my-video.mp4" type="video/mp4">
+                    <source src="videos/my-video.webm" type="video/webm">
+                    <source src="videos/my-video.ogg" type="video/ogg">
+                    
+                    <div class="video-error" style="display: none; padding: 20px; background: #fee; border-radius: 5px;">
+                        <p>❌ حدث خطأ في تشغيل الفيديو. الأسباب المحتملة:</p>
+                        <ul>
+                            <li>تنسيق الفيديو غير مدعوم</li>
+                            <li>حجم الفيديو كبير جداً</li>
+                            <li>مشكلة في الترميز</li>
+                        </ul>
+                        <p>📥 <a href="videos/my-video.mp4" download>انقر لتحميل الفيديو</a></p>
+                    </div>
+                </video>
             </div>
             <p style="margin-top: 15px; color: #666;">هذا الفيديو يعرض نبذة عن عملي</p>
         </section>
-        <!-- ======== نهاية كود الفيديو ======== -->
-       
     </div>
-</body>
-</html>               
 
+    <script>
+    function handleVideoError(videoElement) {
+        const errorDiv = videoElement.querySelector('.video-error');
+        if (errorDiv) {
+            errorDiv.style.display = 'block';
+        }
+        
+        console.log('كود الخطأ:', videoElement.error ? videoElement.error.code : 'غير معروف');
+    }
+    </script>
+</body>
+</html>
