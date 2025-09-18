@@ -3,16 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض الفيديوهات - موقعي الشخصي</title>
+    <title>معرض فيديوهات الأمن السيبراني - CybersecurityRahbar</title>
+    <!-- وصف الصفحة العام -->
+    <meta name="description" content="شاهد أحدث فيديوهاتي التعليمية في مجال الأمن السيبراني، اختبار الاختراق، أدوات الحماية، وشروحات تقنية متقدمة.">
+    
+    <!-- بيانات منظمة للصفحة بأكملها (مهم جدًا) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "معرض فيديوهات CybersecurityRahbar",
+      "description": "مجموعة من الفيديوهات التعليمية والتطبيقات العملية في الأمن السيبراني",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "VideoObject",
+            "name": "شرح نظام حماية متكامل للشبكات",
+            "description": "شرح عملي لنظام حماية متطور للشبكات الصغيرة والمتوسطة بميزات متكاملة",
+            "thumbnailUrl": "https://cybersecurityrahbar.github.io/images/video1-thumb.jpg",
+            "contentUrl": "https://cybersecurityrahbar.github.io/videos/video1.mp4",
+            "uploadDate": "2023-11-15"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "VideoObject",
+            "name": "شرح أداة فحص الثغرات الأمنية",
+            "description": "شرح مفصل لأداة متقدمة للكشف عن الثغرات في الأنظمة والمواقع",
+            "thumbnailUrl": "https://cybersecurityrahbar.github.io/images/video2-thumb.jpg",
+            "contentUrl": "https://cybersecurityrahbar.github.io/videos/video2.mp4",
+            "uploadDate": "2023-12-01"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "VideoObject",
+            "name": "كيفية الحصول على شهادات الأمن السيبراني",
+            "description": "دليل شامل للحصول على الشهادات المعتمدة في مجال الأمن السيبراني",
+            "thumbnailUrl": "https://cybersecurityrahbar.github.io/images/video3-thumb.jpg",
+            "contentUrl": "https://cybersecurityrahbar.github.io/videos/video3.mp4",
+            "uploadDate": "2023-12-10"
+          }
+        }
+      ]
+    }
+    </script>
+    
     <style>
-        /* إعدادات عامة */
+        /* الإعدادات العامة */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #000; /* خلفية سوداء للتركيز على الفيديوهات */
+            background: #0a0a0a; /* خلفية داكنة للتركيز على الفيديوهات */
             color: #fff;
         }
        
@@ -21,47 +72,68 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(10, 10, 10, 0.95);
             padding: 15px 0;
             text-align: center;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
        
         .video-nav a {
-            color: #fff;
+            color: #ccc;
             text-decoration: none;
             margin: 0 15px;
             font-size: 16px;
             transition: color 0.3s;
+            font-weight: 500;
         }
        
         .video-nav a:hover {
             color: #3498db;
         }
        
+        /* العنوان الرئيسي */
+        .main-title {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: 2.2em;
+        }
+        
+        .main-subtitle {
+            text-align: center;
+            color: #bbb;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+       
         /* حاوية الفيديوهات الرئيسية */
         .video-container {
-            padding-top: 60px; /* لمنع التداخل مع شريط التنقل */
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            padding: 70px 20px 20px;
+            gap: 25px;
+            padding: 20px;
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 0 auto 50px;
         }
        
         /* تنسيق كل فيديو */
         .video-item {
             background: rgba(30, 30, 30, 0.9);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
        
         .video-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 150, 255, 0.2);
         }
        
         .video-item video {
@@ -70,35 +142,54 @@
             object-fit: cover;
             display: block;
             background: #000;
+            border-bottom: 2px solid #3498db;
         }
        
         .video-info {
-            padding: 15px;
+            padding: 20px;
         }
        
         .video-info h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: #fff;
-            font-size: 18px;
+            font-size: 20px;
+            line-height: 1.4;
         }
        
         .video-info p {
             margin: 0;
             color: #bbb;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            color: #777;
             font-size: 14px;
-            line-height: 1.5;
         }
        
         /* تنسيق للشاشات الصغيرة */
         @media (max-width: 768px) {
             .video-container {
                 grid-template-columns: 1fr;
-                padding: 60px 15px 15px;
+                padding: 20px 15px;
             }
            
             .video-nav a {
                 margin: 0 10px;
                 font-size: 14px;
+            }
+            
+            .main-title {
+                font-size: 1.8em;
+                margin-top: 70px;
+            }
+            
+            .main-subtitle {
+                font-size: 1em;
             }
         }
        
@@ -108,7 +199,17 @@
         }
        
         .video-item:nth-child(even) {
-            border-left: 4px solid #e74c3c;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        /* تذييل الصفحة */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(10, 10, 10, 0.95);
+            color: #777;
+            margin-top: 40px;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
@@ -116,11 +217,16 @@
     <!-- شريط تنقل بسيط -->
     <nav class="video-nav">
         <a href="index.html">الرئيسية</a>
-        <a href="gallery.html">الصور</a>
-        <a href="videos.html" style="color: #3498db;">الفيديوهات</a>
-        <a href="poetry.html">ديوان الشعر</a> |
+        <a href="gallery.html">معرض الأعمال</a>
+        <a href="videos.html" style="color: #3498db;">معرض الفيديوهات</a>
+        <a href="poetry.html">ديوان الشعر</a>
         <a href="about.html">عنّي</a>
+        <a href="contact.html">اتصل بي</a>
     </nav>
+   
+    <!-- العنوان الرئيسي -->
+    <h1 class="main-title">معرض فيديوهات الأمن السيبراني</h1>
+    <p class="main-subtitle">شروحات تعليمية، أدوات حماية، وتجارب عملية في مجال الأمن السيبراني والهاكر الأخلاقي</p>
    
     <!-- حاوية الفيديوهات -->
     <div class="video-container">
@@ -131,8 +237,12 @@
                 متصفحك لا يدعم تشغيل الفيديو.
             </video>
             <div class="video-info">
-                <h3>مشروع التخرج</h3>
-                <p>عرض لمشروع تخرجي في تطوير الويب، يظهر المراحل الرئيسية للتطوير والنتائج النهائية.</p>
+                <h3>شرح نظام حماية متكامل للشبكات</h3>
+                <p>شرح عملي لنظام حماية متطور للشبكات الصغيرة والمتوسطة مع توضيح الميزات المتكاملة وآلية العمل.</p>
+                <div class="video-meta">
+                    <span>مدة الفيديو: 15:30</span>
+                    <span>نشر في: 17 سبتمبر 2025</span>
+                </div>
             </div>
         </div>
        
@@ -143,8 +253,12 @@
                 متصفحك لا يدعم تشغيل الفيديو.
             </video>
             <div class="video-info">
-                <h3>شرح تقنية جديدة</h3>
-                <p>شرح مفصل لتقنية CSS Grid وكيفية استخدامها في إنشاء تخطيطات متجاوبة.</p>
+                <h3>شرح أداة فحص الثغرات الأمنية</h3>
+                <p>عرض مفصل لأداة متقدمة للكشف عن الثغرات في الأنظمة والمواقع مع شرح آلية عملها وكيفية استخدامها.</p>
+                <div class="video-meta">
+                    <span>مدة الفيديو: 22:15</span>
+                    <span>نشر في: 18 سبتمبر 2025</span>
+                </div>
             </div>
         </div>
        
@@ -155,12 +269,21 @@
                 متصفحك لا يدعم تشغيل الفيديو.
             </video>
             <div class="video-info">
-                <h3>تجربة مستخدم</h3>
-                <p>عرض لتجربة مستخدم لتطبيق جوال قمت بتطويره، يظهر الواجهات والتفاعلات الرئيسية.</p>
+                <h3>كيفية الحصول على شهادات الأمن السيبراني</h3>
+                <p>دليل شامل يوضح خطوات الحصول على الشهادات المعتمدة في مجال الأمن السيبراني ونصائح للتحضير للامتحانات.</p>
+                <div class="video-meta">
+                    <span>مدة الفيديو: 18:40</span>
+                    <span>نشر في: 18 سبتمبر 2025</span>
+                </div>
             </div>
         </div>
        
         <!-- يمكنك إضافة المزيد من الفيديوهات هنا -->
+    </div>
+    
+    <!-- تذييل الصفحة -->
+    <div class="footer">
+        <p>© 2025 CybersecurityRahbar. جميع الحقوق محفوظة.</p>
     </div>
 </body>
 </html>
